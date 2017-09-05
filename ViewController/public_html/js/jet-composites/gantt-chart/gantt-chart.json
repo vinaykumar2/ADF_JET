@@ -1,0 +1,8 @@
+    {
+        "properties": {
+            "ganttData": {
+                "type": "string"
+            }
+        }
+
+    }

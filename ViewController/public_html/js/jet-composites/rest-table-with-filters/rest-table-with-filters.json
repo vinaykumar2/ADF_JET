@@ -1,0 +1,8 @@
+    {
+        "properties": {
+            "restFilterData": {
+                "type": "string"
+            }
+        }
+
+    }

@@ -1,0 +1,33 @@
+<div id='chart-container' data-bind="ojComponent: {
+                    component: 'ojChart',
+                    type: 'bar',
+                    orientation: orientationValue2,
+                    stack: stackValue2,
+                    series: barSeriesValue2,
+                    groups: barGroupsValue2,
+                    animationOnDisplay: 'auto',
+                    animationOnDataChange: 'auto',
+                    hoverBehavior: 'dim'
+                }" style="max-width:400px;width:100%;height:280px;" xmlns="http://www.w3.org/1999/xhtml"></div>
+        <div id="radioButtonset" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: orientationValue2, chroming: 'half'}"
+             aria-label="Choose an orientation.">
+            <!-- ko foreach: orientationOptions2 -->
+              <label data-bind="attr: {for: id}"></label>
+              <input type="radio" name="orientation"
+                   data-bind="value: value, attr: {id: id},
+                   ojComponent: {component: 'ojButton', label: label,
+                                     icons: {start: icon}, display: 'icons'}"/>
+            <!-- /ko -->
+        </div>
+        <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"></span>
+        <!-- unstacked/stacked toggle button -->
+        <div id="radioButtonset2" data-bind="ojComponent: {component: 'ojButtonset', focusManagement:'none', checked: stackValue2, chroming: 'half'}"
+             aria-label="Choose a stack setting.">
+            <!-- ko foreach: stackOptions2 -->
+              <label data-bind="attr: {for: id}"></label>
+              <input type="radio" name="stack"
+                   data-bind="value: value, attr: {id: id},
+                   ojComponent: {component: 'ojButton', label: label,
+                                     icons: {start: icon}, display: 'icons'}"/>
+            <!-- /ko -->
+        </div>

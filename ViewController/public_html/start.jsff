@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:button text="Basic page" id="b1" action="basic"/>
+  <af:button text="Basic chart" id="b2" action="chart" partialSubmit="false"/>
+  <af:button text="Gantt chart" id="b5" action="gantt"/>
+  <af:button text="Rest table public api" id="b3" action="rest"/>
+  <af:button text="Rest table with Elastic Search IHC Data" id="b6" action="restESihc"/>
+  <af:button text="Rest table with Elastic Search - Data from own index" id="b7" action="restES"/>
+
+</ui:composition>

@@ -1,0 +1,23 @@
+<div id="gantt" aria-label="Project Gantt"
+  data-bind="ojComponent: {
+    component: 'ojGantt',
+    start: projectStartDate,
+    end: projectEndDate,
+    gridlines: {
+      horizontal: 'visible',
+      vertical: 'visible'
+    },
+    rowAxis: {
+      rendered: 'on'
+    },
+    majorAxis: {
+      scale: 'weeks',
+      zoomOrder: ['years', 'quarters', 'months', 'weeks', 'days']
+    },
+    minorAxis: {
+      scale: 'days',
+      zoomOrder: ['years', 'quarters', 'months', 'weeks', 'days']
+    },
+    rows: data
+  }" style="width:100%;height:300px">
+</div>

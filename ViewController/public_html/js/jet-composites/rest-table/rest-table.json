@@ -1,0 +1,8 @@
+    {
+        "properties": {
+            "restData": {
+                "type": "string"
+            }
+        }
+
+    }

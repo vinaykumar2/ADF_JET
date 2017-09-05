@@ -1,0 +1,47 @@
+<div class="oj-hybrid-padding">
+  <h3>Characters</h3>
+  <div class="oj-hybrid-padding">
+    <div class="oj-flex oj-flex-items-pad">
+      <div class="oj-sm-12 oj-lg-3 oj-flex-item">
+        <div class="oj-panel oj-flex-item oj-margin">
+          <h4>Filters</h4><br />
+          <form>
+            <label for="from">From</label>
+            <input id="from" data-bind="ojComponent: {component: 'ojInputDate',
+                                  datePicker: {
+                                    numberOfMonths: 1
+                                  },
+                                  max: toValue,
+                                  value: value}" /><br/>
+
+            <label for="to">To</label>
+            <input id="to" data-bind="ojComponent: {component: 'ojInputDate',
+                                  datePicker: {
+                                    numberOfMonths: 3
+                                  },
+                                  min: value,
+                                  value: toValue}" />
+            <br><br>
+            <input id="comboboxContinent" list="continents" maxlength="30" placeholder="Click to filter countries" data-bind="ojComponent: {component:'ojCombobox',
+                    options: continents                   }">
+            <datalist id="continents">
+              <option value="Africa">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="Asia">Asia</option>
+            </datalist>
+            <br><br>
+
+          </form>
+        </div>
+      </div>
+    <div class="oj-sm-12 oj-lg-9 oj-flex-item">
+      <div class="oj-panel oj-flex-item oj-margin">
+        <h4>Table</h4>
+        <div>
+        <rest-table/>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

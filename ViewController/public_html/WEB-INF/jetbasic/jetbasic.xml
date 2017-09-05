@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="jetbasic">
+    <default-activity>start</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="basicPage">
+      <page>/basicPage.jsff</page>
+    </view>
+    <view id="jetChart">
+      <page>/jetChart.jsff</page>
+    </view>
+    <url-view id="LocalJet">
+      <url>http://localhost:8000</url>
+    </url-view>
+    <view id="ganttchart">
+      <page>/ganttchart.jsff</page>
+    </view>
+    <view id="restTable">
+      <page>/restTable.jsff</page>
+    </view>
+    <view id="restfiltertable">
+      <page>/restfiltertable.jsff</page>
+    </view>
+    <view id="elasticSearchTable">
+      <page>/elasticSearchTable.jsff</page>
+    </view>
+    <view id="start">
+      <page>/start.jsff</page>
+    </view>
+    <view id="IHCCustomerOrders">
+      <page>/IHCCustomerOrders.jsff</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>start</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>basic</from-outcome>
+        <to-activity-id>basicPage</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>gantt</from-outcome>
+        <to-activity-id>ganttchart</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>chart</from-outcome>
+        <to-activity-id>jetChart</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>rest</from-outcome>
+        <to-activity-id>restTable</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>restFilter</from-outcome>
+        <to-activity-id>restfiltertable</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>restES</from-outcome>
+        <to-activity-id>elasticSearchTable</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__10">
+        <from-outcome>restESihc</from-outcome>
+        <to-activity-id>IHCCustomerOrders</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>*</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>back</from-outcome>
+        <to-activity-id>start</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
